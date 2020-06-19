@@ -1,111 +1,244 @@
-#root, html, body {
+body {
   margin: 0;
-  padding: 0;
-  height: 100vh;
-  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  background: #fff;
 }
-
-.app {
-  height: 100%;
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./images/city.jpg');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: Dosis, sans-serif;
+}
+.team-info {
+  padding: 6em 0;
+}
+h3.title {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin-bottom: 1em;
+  padding-bottom: 0.3em;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+h3.title:before {
+  content: "";
+  width: 80px;
+  height: 5px;
+  background: #dfdcfb;
+  position: absolute;
+  bottom: 0;
+  left: 46%;
+  display: block;
+}
+.team-info {
+  background: rgba(0, 0, 0, 0.54);
+}
+.contact {
+  background: url(https://images.pexels.com/photos/3609139/pexels-photo-3609139.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) no-repeat center 0 fixed;
   background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.contact-form {
   text-align: center;
 }
-
-.card {
-  background: whitesmoke;
-  width: 40%;
-  height: 20%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 25px;
-  padding: 2%;
-  box-shadow: 10px 10px;
+::-webkit-input-placeholder {
+  color: #fff !important;
+}
+:-moz-placeholder {
+  color: #fff !important;
+}
+::-moz-placeholder {
+  color: #fff !important;
+}
+:-ms-input-placeholder {
+  color: #fff !important;
+}
+@media (max-width: 1366px) {
+  .team-info {
+      padding: 5em 0;
+  }
+}
+@media (max-width: 1280px) {
+  h3.title {
+      margin-bottom: 0.8em;
+  }
+}
+@media (max-width: 1080px) {
+  h3.title {
+      font-size: 3.6em;
+  }
+  .team-info {
+      padding: 4em 0;
+  }
+}
+@media (max-width: 991px) {
+  .team-info {
+      padding: 3.5em 0;
+  }
+  h3.title {
+      font-size: 3.3em;
+  }
+}
+@media (max-width: 640px) {
+  .team-info {
+      padding: 3em 0;
+  }
+  h3.title {
+      font-size: 3em;
+      margin-bottom: 0.6em;
+  }
+  h3.title:before {
+      width: 60px;
+      height: 3px;
+      left: 44%;
+  }
+}
+@media (max-width: 480px) {
+  .team-info {
+      padding: 2em 0;
+  }
+  h3.title {
+      font-size: 2.8em;
+      margin-bottom: 0.5em;
+  }
+  h3.title:before {
+      width: 45px;
+      left: 44%;
+  }
+}
+@media (max-width: 414px) {
+  h3.title {
+      font-size: 2.5em;
+  }
+}
+@media (max-width: 375px) {
+  h3.title {
+      font-size: 2.3em;
+  }
+  h3.title:before {
+      width: 40px;
+      left: 43%;
+  }
+  .team-info {
+      padding: 1.5em 0;
+  }
+}
+@media (max-width: 320px) {
+  h3.title {
+      margin-bottom: 0.3em;
+  }
+  .team-info {
+      padding: 1em 0;
+  }
 }
 
-.heading {
-  display: flex;
-  align-items: center;
-  height: 582px;
-}
 
-.button {
-  position: relative;
-  outline: none;
-  text-decoration: none;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+form {
+  max-width: 960px;
+  margin: auto;
+}
+form input,
+textarea {
+  padding: 10px;
+  border: none;
+  background: 0 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+input#firstname {
+  width: 100%;
+  max-width: 460px;
+  float: left;
+  margin-right: 20px;
+}
+input#surname {
+  width: 100%;
+  max-width: 460px;
+  float: left;
+  margin-left: 20px;
+}
+input#email {
+  width: 100%;
+  margin-top: 20px;
+}
+textarea#message {
+  width: 100%;
+  margin-top: 20px;
+}
+input#submit-btn {
+  margin-top: 20px;
+  width: 100px;
+  border: 2px solid #fff !important;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: 0.25s ease-in-out 0s;
+}
+input#submit-btn:hover {
   cursor: pointer;
-  text-transform: uppercase;
-  height: 200px;
-  width: 210px;
+  background: #fff;
+  color: #000;
+  transform: scale(1.25);
+}
+::-webkit-input-placeholder {
+  color: #fff;
   opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid rgba(22, 76, 167, 0.6);
 }
-  
-.button span {
-  color: #164ca7;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.7px;
+::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
 }
-  
-.button:hover {
-  animation: rotate 0.7s ease-in-out both;
+:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
 }
-  
-.button:hover span {
-  animation: storm 0.7s ease-in-out both;
-  animation-delay: 0.06s;
+input:-moz-placeholder {
+  color: #fff;
+  opacity: 1;
 }
-  
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+@media screen and (max-width: 960px) {
+  form {
+      width: 90%;
   }
-  25% {
-    transform: rotate(3deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(-3deg) translate3d(0, 0, 0);
-  }
-  75% {
-    transform: rotate(1deg) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+  input#firstname,
+  input#surname {
+      margin: 0 !important;
+      max-width: 100% !important;
   }
 }
-  
-@keyframes storm {
-  0% {
-    transform: translate3d(0, 0, 0) translateZ(0);
-  }
-  25% {
-    transform: translate3d(4px, 0, 0) translateZ(0);
-  }
-  50% {
-    transform: translate3d(-3px, 0, 0) translateZ(0);
-  }
-  75% {
-    transform: translate3d(2px, 0, 0) translateZ(0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) translateZ(0);
-  }
-}  
 
-@media only screen and (max-width: 600px) {
-  .card {
-      width: 80%;
-      height: 30%;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* map */
+[id^="drop"] {
+  display: none;
+}
+.map-w3layouts iframe {
+  min-height: 25em;
+  border: none;
+  background: #e8eaec;
+  padding: 0.4em;
+  width: 100%;
 }
