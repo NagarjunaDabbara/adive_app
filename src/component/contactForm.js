@@ -6,60 +6,60 @@ class contactForm extends Component {
     super(props);
 
     this.state = {
-      email: "",
-      message: "",
-      disabled: false,
-      emailSent: null,
+    //   email: "",
+    //   message: "",
+    //   disabled: false,
+    //   emailSent: null,
     };
   }
  
-  handleChange = (event) => {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
+//   handleChange = (event) => {
+//     const target = event.target;
+//     const value = target.type === 'checkbox' ? target.checked : target.value;
+//     const name = target.name;
 
-    this.setState({
-      [name]: value
-    })
-  }
+//     this.setState({
+//       [name]: value
+//     })
+//   }
 
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+//   handleSubmit = (event) => {
+//     event.preventDefault();
 
-    console.log(event.target);
+//     console.log(event.target);
 
-    this.setState({
-      disabled: true
-    });
+//     this.setState({
+//       disabled: true
+//     });
 
-    axios.post('http://ananyabackend-env-1.eba-zdzqzrrb.us-east-2.elasticbeanstalk.com/api/email',{
-      email:this.state.email,
-      message:this.state.message
-  })
-      .then(res => {
-        if (res.data.success) {
-         return this.setState({
-            disabled: false,
-            emailSent: true
-          });
-        } else {
-          this.setState({
-            disabled: false,
-            emailSent: false
-          });
-        }
-      })
-      .catch(err => {
-        console.log(err);
+//     axios.post('http://ananyabackend-env-1.eba-zdzqzrrb.us-east-2.elasticbeanstalk.com/api/email',{
+//       email:this.state.email,
+//       message:this.state.message
+//   })
+//       .then(res => {
+//         if (res.data.success) {
+//          return this.setState({
+//             disabled: false,
+//             emailSent: true
+//           });
+//         } else {
+//           this.setState({
+//             disabled: false,
+//             emailSent: false
+//           });
+//         }
+//       })
+//       .catch(err => {
+//         console.log(err);
 
-        this.setState({
-          disabled: false,
-          emailSent: false
-        });
-      })
+//         this.setState({
+//           disabled: false,
+//           emailSent: false
+//         });
+//       })
 
-  }
+//   }
 
   render() {
     return (
